@@ -1,5 +1,13 @@
 package mvc1.servlet.domain.member;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
+@Builder
+@AllArgsConstructor
 public class Member {
+
 
     private long id;
     private String name;

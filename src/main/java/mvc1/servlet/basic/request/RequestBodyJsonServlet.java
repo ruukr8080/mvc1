@@ -20,7 +20,7 @@ public class RequestBodyJsonServlet extends HttpServlet {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    protected void service(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
         ServletInputStream inputStream = req.getInputStream();
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
@@ -33,6 +33,6 @@ public class RequestBodyJsonServlet extends HttpServlet {
         System.out.println("HelloDataUserName = " + helloData.getName());
         System.out.println("helloDataUserAge = " + helloData.getAge());
 
-        res.getWriter().write("DOOoooit");
+        response.getWriter().write("DOOoooit");
     }
 }
