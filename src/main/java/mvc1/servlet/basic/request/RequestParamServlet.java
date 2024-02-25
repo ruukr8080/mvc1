@@ -1,20 +1,19 @@
 package mvc1.servlet.basic.requestuest;
 
 
-import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 
 /*
 1. 파라미터 전송 기능
-  localhost:8080/requestuest-param?username=hello&age=20
+  localhost:8080/request-param?username=hello&age=20
  */
-@WebServlet(name="requestuestParamServlet", urlPatterns = "/requestuest-param")
+@WebServlet(name="requestuestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
 
     @Override
